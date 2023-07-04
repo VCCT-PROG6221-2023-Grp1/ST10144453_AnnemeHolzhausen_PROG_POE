@@ -1,5 +1,5 @@
 # ST10144453_AnnemeHolzhausen_PROG_POE
-<H1>How to run file:<H1>
+<H1>How to run file:</H1>
 1. Download the file by selecting the drop down menu labeled "<>Code". 
 2. Selet "Download Zip" of which will download the .zip file of the project. 
 3. Extract the .zip folder by right clicking on the file and select "Extract". 
