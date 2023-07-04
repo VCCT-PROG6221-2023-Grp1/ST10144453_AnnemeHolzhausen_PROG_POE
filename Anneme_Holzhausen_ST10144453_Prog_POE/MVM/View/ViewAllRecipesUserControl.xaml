@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Anneme_Holzhausen_ST10144453_Prog_POE.MVM.View.ViewAllRecipesUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Anneme_Holzhausen_ST10144453_Prog_POE.MVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ListView x:Name="RecipeListView" ItemsSource="{Binding Recipes}" HorizontalAlignment="Left" Height="300" Margin="400,94,0,0" VerticalAlignment="Top" Width="400">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="FontSize" Value="16" />
+                    <Setter Property="Foreground" Value="Blue" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Recipe Name" DisplayMemberBinding="{Binding RecipeName}" />
+                    <!-- Add additional columns for other recipe information if needed -->
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListBox x:Name="SavedRecipesListBox" HorizontalAlignment="Left" Height="200" Margin="0,166,0,0" VerticalAlignment="Top" Width="400">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding RecipeName}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>
